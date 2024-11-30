@@ -1,32 +1,58 @@
 package main.java.lk.ijse.crop_monitoring.config;
 
+import main.java.lk.ijse.crop_monitoring.service.impl.CustomUserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
-public class SecurityConfig {
+@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
-                .csrf().disable() // Disable CSRF for simplicity (not recommended for production)
-                .authorizeRequests()
-                .antMatchers("/api/auth/**").permitAll() // Open endpoints (login, signup)
-                .anyRequest().authenticated()          // Protect all other endpoints
-                .and()
-                .httpBasic(); // Enable basic authentication for testing purposes
+    private final CustomUserDetailsService customUserDetailsService;
 
-        return http.build();
+    public SecurityConfig(CustomUserDetailsService customUserDetailsService) {
+        this.customUserDetailsService = customUserDetailsService;
     }
 
+    // Configure authentication using CustomUserDetailsService
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(customUserDetailsService)
+                .passwordEncoder(passwordEncoder());
+    }
+
+    // Configure HTTP security (authorization)
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.csrf().disable()
+                .authorizeRequests()
+                .antMatchers(HttpMethod.POST, "/api/auth/signup").permitAll() // Allow signup without authentication
+                .antMatchers(HttpMethod.POST, "/api/auth/login").permitAll()  // Allow login without authentication
+                .anyRequest().authenticated()  // Protect all other endpoints
+                .and()
+                .formLogin(); // Optionally enable form login
+    }
+
+    // Define a PasswordEncoder bean
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder(); // Use BCrypt for password encoding
+        return new BCryptPasswordEncoder();  // Use BCrypt for password encryption
+    }
+
+    // Expose AuthenticationManager as a Bean
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
     }
 }
