@@ -1,5 +1,7 @@
 package main.java.lk.ijse.crop_monitoring.config;
 
+import main.java.lk.ijse.crop_monitoring.security.JwtAuthenticationFilter;
+import main.java.lk.ijse.crop_monitoring.security.JwtUtil;
 import main.java.lk.ijse.crop_monitoring.service.impl.CustomUserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,9 +21,11 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final CustomUserDetailsService customUserDetailsService;
+    private final JwtUtil jwtUtil;
 
-    public SecurityConfig(CustomUserDetailsService customUserDetailsService) {
+    public SecurityConfig(CustomUserDetailsService customUserDetailsService, JwtUtil jwtUtil) {
         this.customUserDetailsService = customUserDetailsService;
+        this.jwtUtil = jwtUtil;
     }
 
     // Configure authentication using CustomUserDetailsService
@@ -40,7 +44,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/api/auth/login").permitAll()  // Allow login without authentication
                 .anyRequest().authenticated()  // Protect all other endpoints
                 .and()
-                .formLogin(); // Optionally enable form login
+                .addFilter(new JwtAuthenticationFilter(authenticationManager(), jwtUtil)); // Add JWT filter here
     }
 
     // Define a PasswordEncoder bean
