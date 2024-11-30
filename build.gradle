@@ -31,6 +31,12 @@ dependencies {
 	implementation 'org.springframework.security:spring-security-config'
 	implementation 'org.springframework.security:spring-security-web'
 
+
+	implementation 'io.jsonwebtoken:jjwt:0.11.5'  // Add JWT dependency
+	implementation 'org.springframework.boot:spring-boot-starter-security'  // Ensure Spring Security is included
+	implementation 'org.springframework.boot:spring-boot-starter-web'  // For REST APIs
+
+
 }
 
 tasks.named('test') {
