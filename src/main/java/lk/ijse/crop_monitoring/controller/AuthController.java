@@ -1,7 +1,13 @@
 package main.java.lk.ijse.crop_monitoring.controller;
 
+import main.java.lk.ijse.crop_monitoring.security.JwtUtil;
+import main.java.lk.ijse.crop_monitoring.entity.User;
+import main.java.lk.ijse.crop_monitoring.service.impl.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -9,19 +15,31 @@ import org.springframework.web.bind.annotation.*;
 public class AuthController {
 
     @Autowired
-    private PasswordEncoder passwordEncoder;
+    private AuthenticationManager authenticationManager;
 
-    // Placeholder login endpoint
+    @Autowired
+    private JwtUtil jwtUtil;
+
+    @Autowired
+    private CustomUserDetailsService customUserDetailsService;
+
+    // Login endpoint that returns JWT token
     @PostMapping("/login")
-    public String login(@RequestParam String username, @RequestParam String password) {
-        return "Login Successful!";
+    public String login(@RequestBody User loginUser) {
+        Authentication authentication = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(loginUser.getUsername(), loginUser.getPassword()));
+
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+
+        User user = (User) authentication.getPrincipal();
+
+        return jwtUtil.generateToken(user);
     }
 
-    // Placeholder signup endpoint
+    // Signup endpoint (Implement signup logic here)
     @PostMapping("/signup")
-    public String signup(@RequestParam String username, @RequestParam String password) {
-        String encodedPassword = passwordEncoder.encode(password);
-        // Logic to save the user in the database
-        return "Signup Successful! Encoded password: " + encodedPassword;
+    public String signup(@RequestBody User newUser) {
+        // Handle registration logic
+        return "User registered successfully";
     }
 }
