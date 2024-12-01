@@ -1,8 +1,8 @@
 package main.java.lk.ijse.crop_monitoring.controller;
 
-import main.java.lk.ijse.crop_monitoring.security.JwtUtil;
 import main.java.lk.ijse.crop_monitoring.entity.User;
-import main.java.lk.ijse.crop_monitoring.service.impl.CustomUserDetailsService;
+import main.java.lk.ijse.crop_monitoring.security.JwtUtil;
+import main.java.lk.ijse.crop_monitoring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -21,7 +21,7 @@ public class AuthController {
     private JwtUtil jwtUtil;
 
     @Autowired
-    private CustomUserDetailsService customUserDetailsService;
+    private UserService userService;  // Inject UserService to handle registration
 
     // Login endpoint that returns JWT token
     @PostMapping("/login")
@@ -33,13 +33,23 @@ public class AuthController {
 
         User user = (User) authentication.getPrincipal();
 
-        return jwtUtil.generateToken(user);
+        return jwtUtil.generateToken(user);  // Generate and return the JWT token
     }
 
-    // Signup endpoint (Implement signup logic here)
+    // Signup endpoint (save user and encrypt password)
     @PostMapping("/signup")
     public String signup(@RequestBody User newUser) {
-        // Handle registration logic
-        return "User registered successfully";
+        // Check if the user already exists (optional)
+        if (userService.getUserByUsername(newUser.getUsername()) != null) {
+            return "Username is already taken!";
+        }
+
+        // Encrypt password before saving to the database
+        newUser.setPassword(newUser.getPassword());  // This is where the password encoding happens
+
+        // Register the user using UserService
+        userService.saveUser(newUser);  // Save the user to the database
+
+        return "User registered successfully!";
     }
 }
