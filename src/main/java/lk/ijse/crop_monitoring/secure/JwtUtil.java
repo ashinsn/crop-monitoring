@@ -1,4 +1,4 @@
-package main.java.lk.ijse.crop_monitoring.security;
+package main.java.lk.ijse.crop_monitoring.secure;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

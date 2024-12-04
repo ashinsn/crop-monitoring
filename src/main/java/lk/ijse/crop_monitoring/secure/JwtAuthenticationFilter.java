@@ -1,4 +1,4 @@
-package main.java.lk.ijse.crop_monitoring.security;
+package main.java.lk.ijse.crop_monitoring.secure;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
