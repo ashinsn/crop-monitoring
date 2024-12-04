@@ -1,6 +1,5 @@
 package main.java.lk.ijse.crop_monitoring.service.impl;
 
-import main.java.lk.ijse.crop_monitoring.entity.User;
 import main.java.lk.ijse.crop_monitoring.repository.UserRepository;  // Import your repository
 import main.java.lk.ijse.crop_monitoring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

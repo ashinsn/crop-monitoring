@@ -1,7 +1,6 @@
 package main.java.lk.ijse.crop_monitoring.service.impl;
 
 
-import main.java.lk.ijse.crop_monitoring.entity.User;
 import main.java.lk.ijse.crop_monitoring.repository.UserRepository;
 import main.java.lk.ijse.crop_monitoring.service.UserService;
 

@@ -1,7 +1,5 @@
 package main.java.lk.ijse.crop_monitoring.service;
 
-import main.java.lk.ijse.crop_monitoring.entity.Farm;
-
 import java.util.List;
 
 public interface FarmService {

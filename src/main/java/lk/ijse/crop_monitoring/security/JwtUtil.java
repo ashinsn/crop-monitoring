@@ -2,7 +2,6 @@ package main.java.lk.ijse.crop_monitoring.security;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import main.java.lk.ijse.crop_monitoring.entity.User;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
