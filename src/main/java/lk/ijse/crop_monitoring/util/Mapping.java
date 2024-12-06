@@ -1,3 +1,4 @@
+
 package main.java.lk.ijse.crop_monitoring.util;
 
 import main.java.lk.ijse.crop_monitoring.dto.impl.*;
@@ -14,10 +15,10 @@ import java.util.List;
 public class Mapping {
     @Autowired
     private ModelMapper modelMapper;
-    public Field toFieldEntity(FieldDTO fieldDTO) {
+    public main.java.lk.ijse.crop_monitoring.entity.impl.Field toFieldEntity(FieldDTO fieldDTO) {
         return modelMapper.map(fieldDTO, Field.class);
     }
-    public FieldDTO toFieldDTO(Field fieldEntity) {
+    public FieldDTO toFieldDTO(main.java.lk.ijse.crop_monitoring.entity.impl.Field fieldEntity) {
         return modelMapper.map(fieldEntity, FieldDTO.class);
     }
     public List<FieldDTO> asFieldDTOList(List<Field> fieldEntities) {
