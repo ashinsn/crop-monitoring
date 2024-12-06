@@ -1,4 +1,4 @@
-package main.java.lk.ijse.crop_monitoring.secure;
+package lk.ijse.crop_monitoring.secure;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

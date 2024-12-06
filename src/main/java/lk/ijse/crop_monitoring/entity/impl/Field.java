@@ -1,4 +1,4 @@
-package main.java.lk.ijse.crop_monitoring.entity.impl;
+package lk.ijse.crop_monitoring.entity.impl;
 
 import jakarta.persistence.*;
 import main.java.lk.ijse.crop_monitoring.entity.SuperEntity;
@@ -23,7 +23,7 @@ public class Field implements SuperEntity {
     @OneToMany(mappedBy="field")
     private List<Crop> crops;
     @OneToMany(mappedBy="field")
-    private List<Staff> staff;
+    private List<lk.ijse.crop_monitoring.entity.impl.Staff> staff;
     @OneToMany(mappedBy="field")
     private List<Equipment> equipment;
     @Column(columnDefinition = "LONGTEXT")
@@ -31,5 +31,5 @@ public class Field implements SuperEntity {
     @Column(columnDefinition = "LONGTEXT")
     private String fieldImage2;
     @OneToMany(mappedBy="field")
-    private List <Log> logs;
+    private List <lk.ijse.crop_monitoring.entity.impl.Log> logs;
 }

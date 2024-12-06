@@ -1,14 +1,14 @@
-package main.java.lk.ijse.crop_monitoring.service.impl;
+package lk.ijse.crop_monitoring.service.impl;
 
 import jakarta.transaction.Transactional;
-import main.java.lk.ijse.crop_monitoring.customStatusCodes.SelectedStaffErrorStatus;
-import main.java.lk.ijse.crop_monitoring.dao.StaffDAO;
-import main.java.lk.ijse.crop_monitoring.dto.StaffStatus;
-import main.java.lk.ijse.crop_monitoring.dto.impl.StaffDTO;
-import main.java.lk.ijse.crop_monitoring.entity.impl.Staff;
-import main.java.lk.ijse.crop_monitoring.exception.StaffNotFoundException;
-import main.java.lk.ijse.crop_monitoring.service.StaffService;
-import main.java.lk.ijse.crop_monitoring.util.Mapping;
+import lk.ijse.crop_monitoring.customStatusCodes.SelectedStaffErrorStatus;
+import lk.ijse.crop_monitoring.dao.StaffDAO;
+import lk.ijse.crop_monitoring.dto.StaffStatus;
+import lk.ijse.crop_monitoring.dto.impl.StaffDTO;
+import lk.ijse.crop_monitoring.entity.impl.Staff;
+import lk.ijse.crop_monitoring.exception.StaffNotFoundException;
+import lk.ijse.crop_monitoring.service.StaffService;
+import lk.ijse.crop_monitoring.util.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

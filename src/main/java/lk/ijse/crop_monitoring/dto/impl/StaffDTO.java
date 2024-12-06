@@ -1,14 +1,11 @@
-package main.java.lk.ijse.crop_monitoring.dto.impl;
+package lk.ijse.crop_monitoring.dto.impl;
 
-import main.java.lk.ijse.crop_monitoring.dto.StaffStatus;
-import main.java.lk.ijse.crop_monitoring.entity.Gender;
-import main.java.lk.ijse.crop_monitoring.entity.Role;
-import main.java.lk.ijse.crop_monitoring.entity.SuperEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.Date;
+import lk.ijse.crop_monitoring.dto.StaffStatus;
+import main.java.lk.ijse.crop_monitoring.entity.Gender;
+import main.java.lk.ijse.crop_monitoring.entity.Role;
 
 @AllArgsConstructor
 @NoArgsConstructor

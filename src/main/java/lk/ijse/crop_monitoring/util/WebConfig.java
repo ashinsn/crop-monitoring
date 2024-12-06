@@ -1,4 +1,4 @@
-package main.java.lk.ijse.crop_monitoring.util;
+package lk.ijse.crop_monitoring.util;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

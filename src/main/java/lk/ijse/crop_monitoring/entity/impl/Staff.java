@@ -1,4 +1,4 @@
-package main.java.lk.ijse.crop_monitoring.entity.impl;
+package lk.ijse.crop_monitoring.entity.impl;
 
 import jakarta.persistence.*;
 import main.java.lk.ijse.crop_monitoring.entity.Gender;
@@ -44,7 +44,7 @@ public class Staff implements SuperEntity {
     @JoinColumn(name = "fieldCode")
     private Field field;
     @OneToMany(mappedBy = "staff")
-    private List<Vehicle> vehicles;
+    private List<lk.ijse.crop_monitoring.entity.impl.Vehicle> vehicles;
     @OneToMany(mappedBy = "staff")
     private List<Equipment> equipments;
     @OneToMany(mappedBy="staff")

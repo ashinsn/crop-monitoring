@@ -1,7 +1,7 @@
-package main.java.lk.ijse.crop_monitoring.dao;
+package lk.ijse.crop_monitoring.dao;
 
-import main.java.lk.ijse.crop_monitoring.entity.impl.Crop;
-import main.java.lk.ijse.crop_monitoring.entity.impl.Log;
+import lk.ijse.crop_monitoring.entity.impl.Crop;
+import lk.ijse.crop_monitoring.entity.impl.Log;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

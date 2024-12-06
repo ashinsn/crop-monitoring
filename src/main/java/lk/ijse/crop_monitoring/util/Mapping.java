@@ -1,8 +1,7 @@
+package lk.ijse.crop_monitoring.util;
 
-package main.java.lk.ijse.crop_monitoring.util;
-
-import main.java.lk.ijse.crop_monitoring.dto.impl.*;
-import main.java.lk.ijse.crop_monitoring.entity.impl.*;
+import lk.ijse.crop_monitoring.dto.impl.*;
+import lk.ijse.crop_monitoring.entity.impl.*;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,10 +14,10 @@ import java.util.List;
 public class Mapping {
     @Autowired
     private ModelMapper modelMapper;
-    public main.java.lk.ijse.crop_monitoring.entity.impl.Field toFieldEntity(FieldDTO fieldDTO) {
+    public lk.ijse.crop_monitoring.entity.impl.Field toFieldEntity(FieldDTO fieldDTO) {
         return modelMapper.map(fieldDTO, Field.class);
     }
-    public FieldDTO toFieldDTO(main.java.lk.ijse.crop_monitoring.entity.impl.Field fieldEntity) {
+    public FieldDTO toFieldDTO(lk.ijse.crop_monitoring.entity.impl.Field fieldEntity) {
         return modelMapper.map(fieldEntity, FieldDTO.class);
     }
     public List<FieldDTO> asFieldDTOList(List<Field> fieldEntities) {

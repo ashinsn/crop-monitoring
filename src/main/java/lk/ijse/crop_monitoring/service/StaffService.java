@@ -1,7 +1,7 @@
-package main.java.lk.ijse.crop_monitoring.service;
+package lk.ijse.crop_monitoring.service;
 
-import main.java.lk.ijse.crop_monitoring.dto.StaffStatus;
-import main.java.lk.ijse.crop_monitoring.dto.impl.StaffDTO;
+import lk.ijse.crop_monitoring.dto.StaffStatus;
+import lk.ijse.crop_monitoring.dto.impl.StaffDTO;
 
 import java.util.List;
 

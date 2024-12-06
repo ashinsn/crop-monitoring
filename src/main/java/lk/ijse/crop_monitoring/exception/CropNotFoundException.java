@@ -1,4 +1,4 @@
-package main.java.lk.ijse.crop_monitoring.exception;
+package lk.ijse.crop_monitoring.exception;
 
 public class CropNotFoundException extends RuntimeException {
     public CropNotFoundException() {

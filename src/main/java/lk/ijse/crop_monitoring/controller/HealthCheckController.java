@@ -1,4 +1,4 @@
-package main.java.lk.ijse.crop_monitoring.controller;
+package lk.ijse.crop_monitoring.controller;
 
 
 import org.springframework.web.bind.annotation.GetMapping;

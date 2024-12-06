@@ -1,4 +1,4 @@
-package main.java.lk.ijse.crop_monitoring;
+package lk.ijse.crop_monitoring;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;

@@ -1,14 +1,14 @@
-package main.java.lk.ijse.crop_monitoring.service.impl;
+package lk.ijse.crop_monitoring.service.impl;
 
 import jakarta.transaction.Transactional;
-import main.java.lk.ijse.crop_monitoring.customStatusCodes.SelectedEquipmentErrorStatus;
-import main.java.lk.ijse.crop_monitoring.dao.EquipmentDAO;
-import main.java.lk.ijse.crop_monitoring.dto.EquipmentStatus;
-import main.java.lk.ijse.crop_monitoring.dto.impl.EquipmentDTO;
-import main.java.lk.ijse.crop_monitoring.entity.impl.Equipment;
-import main.java.lk.ijse.crop_monitoring.exception.EquipmentNotFoundException;
-import main.java.lk.ijse.crop_monitoring.service.EquipmentService;
-import main.java.lk.ijse.crop_monitoring.util.Mapping;
+import lk.ijse.crop_monitoring.customStatusCodes.SelectedEquipmentErrorStatus;
+import lk.ijse.crop_monitoring.dao.EquipmentDAO;
+import lk.ijse.crop_monitoring.dto.EquipmentStatus;
+import lk.ijse.crop_monitoring.dto.impl.EquipmentDTO;
+import lk.ijse.crop_monitoring.entity.impl.Equipment;
+import lk.ijse.crop_monitoring.exception.EquipmentNotFoundException;
+import lk.ijse.crop_monitoring.service.EquipmentService;
+import lk.ijse.crop_monitoring.util.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

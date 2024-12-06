@@ -1,4 +1,4 @@
-package main.java.lk.ijse.crop_monitoring.entity.impl;
+package lk.ijse.crop_monitoring.entity.impl;
 
 import jakarta.persistence.*;
 import main.java.lk.ijse.crop_monitoring.entity.SuperEntity;
@@ -19,8 +19,8 @@ public class Equipment implements SuperEntity {
     private String equipmentStatus;
     @ManyToOne
     @JoinColumn(name = "staffId")
-    private Staff staff;
+    private lk.ijse.crop_monitoring.entity.impl.Staff staff;
     @ManyToOne
     @JoinColumn(name = "fieldCode")
-    private Field field;
+    private lk.ijse.crop_monitoring.entity.impl.Field field;
 }

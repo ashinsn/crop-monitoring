@@ -1,13 +1,13 @@
-package main.java.lk.ijse.crop_monitoring.dto.impl;
+package lk.ijse.crop_monitoring.dto.impl;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.persistence.*;
-import main.java.lk.ijse.crop_monitoring.dto.LogStatus;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.Date;
+import lk.ijse.crop_monitoring.dto.LogStatus;
 
 @AllArgsConstructor
 @NoArgsConstructor

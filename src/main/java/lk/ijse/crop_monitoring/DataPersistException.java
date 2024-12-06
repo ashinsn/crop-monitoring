@@ -1,4 +1,4 @@
-package main.java.lk.ijse.crop_monitoring;
+package lk.ijse.crop_monitoring;
 
 public class DataPersistException extends RuntimeException {
     public DataPersistException() {

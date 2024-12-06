@@ -1,6 +1,6 @@
-package main.java.lk.ijse.crop_monitoring.customStatusCodes;
+package lk.ijse.crop_monitoring.customStatusCodes;
 
-import main.java.lk.ijse.crop_monitoring.dto.VehicleStatus;
+import lk.ijse.crop_monitoring.dto.VehicleStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

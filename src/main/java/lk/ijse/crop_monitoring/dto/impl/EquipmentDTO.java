@@ -1,13 +1,12 @@
-package main.java.lk.ijse.crop_monitoring.dto.impl;
+package lk.ijse.crop_monitoring.dto.impl;
 
-import jakarta.persistence.*;
-import main.java.lk.ijse.crop_monitoring.dto.EquipmentStatus;
-import main.java.lk.ijse.crop_monitoring.entity.SuperEntity;
-import main.java.lk.ijse.crop_monitoring.entity.impl.Field;
-import main.java.lk.ijse.crop_monitoring.entity.impl.Staff;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lk.ijse.crop_monitoring.dto.EquipmentStatus;
 
 @AllArgsConstructor
 @NoArgsConstructor

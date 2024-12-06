@@ -1,4 +1,4 @@
-package main.java.lk.ijse.crop_monitoring.entity.impl;
+package lk.ijse.crop_monitoring.entity.impl;
 
 import jakarta.persistence.*;
 import main.java.lk.ijse.crop_monitoring.entity.SuperEntity;
@@ -24,7 +24,7 @@ public class Crop implements SuperEntity {
     private String season;
     @ManyToOne
     @JoinColumn(name = "fieldCode", nullable = false)
-    private Field field;
+    private lk.ijse.crop_monitoring.entity.impl.Field field;
     @OneToMany(mappedBy="crop")
-    private List <Log> logs;
+    private List <lk.ijse.crop_monitoring.entity.impl.Log> logs;
 }

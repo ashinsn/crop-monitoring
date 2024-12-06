@@ -1,4 +1,4 @@
-package main.java.lk.ijse.crop_monitoring.dto;
+package lk.ijse.crop_monitoring.dto;
 
 import java.io.Serializable;
 

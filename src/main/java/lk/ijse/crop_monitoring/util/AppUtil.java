@@ -1,4 +1,4 @@
-package main.java.lk.ijse.crop_monitoring.util;
+package lk.ijse.crop_monitoring.util;
 
 import java.util.Base64;
 import java.util.UUID;

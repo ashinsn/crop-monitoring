@@ -1,15 +1,15 @@
-package main.java.lk.ijse.crop_monitoring.service.impl;
+package lk.ijse.crop_monitoring.service.impl;
 
 import jakarta.transaction.Transactional;
-import main.java.lk.ijse.crop_monitoring.DataPersistException;
-import main.java.lk.ijse.crop_monitoring.customStatusCodes.SelectedLogErrorStatus;
-import main.java.lk.ijse.crop_monitoring.dao.LogDAO;
-import main.java.lk.ijse.crop_monitoring.dto.LogStatus;
-import main.java.lk.ijse.crop_monitoring.dto.impl.LogDTO;
-import main.java.lk.ijse.crop_monitoring.entity.impl.Log;
-import main.java.lk.ijse.crop_monitoring.exception.LogNotFoundException;
-import main.java.lk.ijse.crop_monitoring.service.LogService;
-import main.java.lk.ijse.crop_monitoring.util.Mapping;
+import lk.ijse.crop_monitoring.DataPersistException;
+import lk.ijse.crop_monitoring.customStatusCodes.SelectedLogErrorStatus;
+import lk.ijse.crop_monitoring.dao.LogDAO;
+import lk.ijse.crop_monitoring.dto.LogStatus;
+import lk.ijse.crop_monitoring.dto.impl.LogDTO;
+import lk.ijse.crop_monitoring.entity.impl.Log;
+import lk.ijse.crop_monitoring.exception.LogNotFoundException;
+import lk.ijse.crop_monitoring.service.LogService;
+import lk.ijse.crop_monitoring.util.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

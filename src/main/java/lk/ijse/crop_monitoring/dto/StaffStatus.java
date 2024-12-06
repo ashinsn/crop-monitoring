@@ -1,6 +1,6 @@
-package main.java.lk.ijse.crop_monitoring.dto;
+package lk.ijse.crop_monitoring.dto;
 
 import java.io.Serializable;
 
-public interface StaffStatus extends Serializable,SuperDTO {
+public interface StaffStatus extends Serializable, lk.ijse.crop_monitoring.dto.SuperDTO {
 }

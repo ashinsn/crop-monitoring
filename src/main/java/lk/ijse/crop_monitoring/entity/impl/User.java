@@ -1,4 +1,4 @@
-package main.java.lk.ijse.crop_monitoring.entity.impl;
+package lk.ijse.crop_monitoring.entity.impl;
 
 import jakarta.persistence.*;
 import main.java.lk.ijse.crop_monitoring.entity.Role;

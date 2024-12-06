@@ -1,15 +1,14 @@
-package main.java.lk.ijse.crop_monitoring.controller;
+package lk.ijse.crop_monitoring.controller;
 
-import main.java.lk.ijse.crop_monitoring.DataPersistException;
-import main.java.lk.ijse.crop_monitoring.customStatusCodes.SelectedStaffErrorStatus;
-import main.java.lk.ijse.crop_monitoring.dto.StaffStatus;
-import main.java.lk.ijse.crop_monitoring.dto.impl.StaffDTO;
-import main.java.lk.ijse.crop_monitoring.dto.impl.StaffDTO;
+import lk.ijse.crop_monitoring.customStatusCodes.SelectedStaffErrorStatus;
+import lk.ijse.crop_monitoring.DataPersistException;
+import lk.ijse.crop_monitoring.dto.StaffStatus;
+import lk.ijse.crop_monitoring.dto.impl.StaffDTO;
 import main.java.lk.ijse.crop_monitoring.entity.Gender;
 import main.java.lk.ijse.crop_monitoring.entity.Role;
-import main.java.lk.ijse.crop_monitoring.exception.StaffNotFoundException;
-import main.java.lk.ijse.crop_monitoring.service.StaffService;
-import main.java.lk.ijse.crop_monitoring.util.RegexProcess;
+import lk.ijse.crop_monitoring.exception.StaffNotFoundException;
+import lk.ijse.crop_monitoring.service.StaffService;
+import lk.ijse.crop_monitoring.util.RegexProcess;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

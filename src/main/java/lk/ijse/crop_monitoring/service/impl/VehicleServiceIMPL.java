@@ -1,20 +1,22 @@
-package main.java.lk.ijse.crop_monitoring.service.impl;
+package lk.ijse.crop_monitoring.service.impl;
 
 import jakarta.transaction.Transactional;
-import main.java.lk.ijse.crop_monitoring.customStatusCodes.SelectedVehicleErrorStatus;
-import main.java.lk.ijse.crop_monitoring.dao.VehicleDAO;
-import main.java.lk.ijse.crop_monitoring.dto.VehicleStatus;
-import main.java.lk.ijse.crop_monitoring.dto.impl.VehicleDTO;
-import main.java.lk.ijse.crop_monitoring.entity.impl.Vehicle;
-import main.java.lk.ijse.crop_monitoring.exception.VehicleNotFoundException;
-import main.java.lk.ijse.crop_monitoring.service.VehicleService;
-import main.java.lk.ijse.crop_monitoring.util.Mapping;
+import lk.ijse.crop_monitoring.customStatusCodes.SelectedVehicleErrorStatus;
+import lk.ijse.crop_monitoring.dao.VehicleDAO;
+import lk.ijse.crop_monitoring.dto.VehicleStatus;
+import lk.ijse.crop_monitoring.dto.impl.VehicleDTO;
+import lk.ijse.crop_monitoring.entity.impl.Vehicle;
+import lk.ijse.crop_monitoring.exception.VehicleNotFoundException;
+import lk.ijse.crop_monitoring.service.VehicleService;
+import lk.ijse.crop_monitoring.util.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
+@Transactional
 public class VehicleServiceIMPL implements VehicleService {
     @Autowired
     private VehicleDAO vehicleDAO;

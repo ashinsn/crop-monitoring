@@ -1,13 +1,13 @@
-package main.java.lk.ijse.crop_monitoring.controller;
+package lk.ijse.crop_monitoring.controller;
 
-import main.java.lk.ijse.crop_monitoring.DataPersistException;
-import main.java.lk.ijse.crop_monitoring.customStatusCodes.SelectedCropErrorStatus;
-import main.java.lk.ijse.crop_monitoring.dto.CropStatus;
-import main.java.lk.ijse.crop_monitoring.dto.impl.CropDTO;
-import main.java.lk.ijse.crop_monitoring.exception.CropNotFoundException;
-import main.java.lk.ijse.crop_monitoring.service.CropService;
-import main.java.lk.ijse.crop_monitoring.util.AppUtil;
-import main.java.lk.ijse.crop_monitoring.util.RegexProcess;
+import lk.ijse.crop_monitoring.customStatusCodes.SelectedCropErrorStatus;
+import lk.ijse.crop_monitoring.DataPersistException;
+import lk.ijse.crop_monitoring.dto.CropStatus;
+import lk.ijse.crop_monitoring.dto.impl.CropDTO;
+import lk.ijse.crop_monitoring.exception.CropNotFoundException;
+import lk.ijse.crop_monitoring.service.CropService;
+import lk.ijse.crop_monitoring.util.AppUtil;
+import lk.ijse.crop_monitoring.util.RegexProcess;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

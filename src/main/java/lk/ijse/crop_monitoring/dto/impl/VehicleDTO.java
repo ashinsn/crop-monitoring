@@ -1,12 +1,9 @@
-package main.java.lk.ijse.crop_monitoring.dto.impl;
+package lk.ijse.crop_monitoring.dto.impl;
 
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import main.java.lk.ijse.crop_monitoring.dto.VehicleStatus;
-import main.java.lk.ijse.crop_monitoring.entity.impl.Staff;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lk.ijse.crop_monitoring.dto.VehicleStatus;
 
 @AllArgsConstructor
 @NoArgsConstructor

@@ -1,4 +1,4 @@
-package main.java.lk.ijse.crop_monitoring.exception;
+package lk.ijse.crop_monitoring.exception;
 
 public class FieldNotFoundException extends RuntimeException {
     public FieldNotFoundException() {
