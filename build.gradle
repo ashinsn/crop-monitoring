@@ -20,9 +20,21 @@ configurations {
 
 repositories {
 	mavenCentral()
-}
-repositories {
-	mavenCentral()
+	maven {
+		url = uri("https://company/com/maven2")
+	}
+	mavenLocal()
+	flatDir {
+		dirs "libs"
+	}
+	google()
+	gradlePluginPortal()
+	maven {
+		url = uri("https://maven-central.storage.apis.com")
+	}
+	ivy {
+		url = uri("https://github.com/ivy-rep/")
+	}
 }
 
 dependencies {
